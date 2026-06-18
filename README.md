@@ -1,10 +1,9 @@
-# Cursor IDE Onboarding — Setup Report
+# Cursor IDE Onboarding — Setup Report & Research Project
 
 ## Tools Installed
 
 ### 1. Cursor IDE
 - Downloaded and installed from https://cursor.com/
-- Version: 0.50.x (latest)
 - Platform: Windows 11
 
 ### 2. Claude Code Extension
@@ -17,51 +16,113 @@
 
 ---
 
-## Steps Completed
+## Research Project: AI-Powered SEO Content Production
 
-1. ✅ Installed Cursor IDE from the official website
-2. ✅ Installed Node.js v24.16.0 (required for Claude Code CLI)
-3. ✅ Installed Git for Windows
-4. ✅ Searched and installed the **Claude Code** add-on from the Extensions panel
-5. ✅ Logged in to Claude Code via Anthropic Console (API key)
-6. ✅ Searched and installed the **Codex** add-on from the Extensions panel
-7. ✅ Created a public GitHub repository
-8. ✅ Cloned and opened the repository in Cursor IDE
-9. ✅ Created this `README.md` file
-10. ✅ Committed and pushed to GitHub
+### Why This Topic
+AI-powered SEO content production sits at the intersection of my background in UI/UX design, web development, and digital marketing. As AI tools reshape how content is created and ranked, understanding how top practitioners use AI in their SEO workflows is directly applicable to real client work.
 
----
+### Expert Selection Criteria
+- Active publishers in 2025–2026 (not just theorists)
+- Practitioner background with real client/agency experience
+- Strong engagement on LinkedIn and/or YouTube
+- Focus on the AI + SEO intersection specifically
 
-## Issues Encountered & Solutions
+### 10 Experts Selected
 
-### Issue 1: `npm` not recognized after installing Node.js
-> Running `npm install` in PowerShell returned "term not recognized" error.
+| # | Name | Focus | Platform |
+|---|------|-------|----------|
+| 1 | Nathan Gotch | AI SEO frameworks, agentic SEO | YouTube + LinkedIn |
+| 2 | Lily Ray | Google updates, AI Overviews, content quality | LinkedIn + X |
+| 3 | Aleyda Solís | Technical SEO, GEO/AEO strategy | YouTube + LinkedIn |
+| 4 | Mike King | Relevance Engineering, AI/ML in SEO | YouTube + LinkedIn |
+| 5 | Kevin Indig | AI Overviews data, LLM traffic research | LinkedIn + Newsletter |
+| 6 | Ryan Law | Expert-led content, thought leadership | LinkedIn + Newsletter |
+| 7 | Cyrus Shepard | Data-driven SEO experiments | LinkedIn + X |
+| 8 | Brian Dean | AI content production, SEO frameworks | LinkedIn |
+| 9 | Rand Fishkin | AI search visibility, audience research | YouTube + LinkedIn |
+| 10 | Jori Ford | AI crawler behavior, technical experiments | LinkedIn + YouTube |
 
-**Solution:** Closed and reopened Cursor IDE so PowerShell could reload the PATH environment variable.
+### Repository Structure
 
-### Issue 2: PowerShell execution policy blocked npm scripts
-> Error: "running scripts is disabled on this system"
+research/
 
-**Solution:** Ran `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned` in PowerShell.
+├── sources.md                    # All 10 experts with links and annotations
 
-### Issue 3: SSL certificate error during Claude Code install
-> `npm error UNABLE_TO_VERIFY_LEAF_SIGNATURE`
+├── linkedin-posts/               # Recent posts collected manually
 
-**Solution:** Used `--strict-ssl=false` flag: `npm install -g @anthropic-ai/claude-code --strict-ssl=false`
+│   ├── nathan-gotch.md
 
-### Issue 4: Claude Code login requires Pro/Max subscription
-> Browser showed "Claude Max atau Pro diperlukan untuk terhubung ke Claude Code"
+│   ├── lily-ray.md
 
-**Solution:** Used Anthropic Console API key instead. Set `ANTHROPIC_API_KEY` environment variable and selected option 2 (Console account) during login.
+│   ├── aleyda-solis.md
 
-### Issue 5: `git` not recognized
-> Running `git clone` returned "term not recognized" error.
+│   ├── mike-king.md
 
-**Solution:** Downloaded and installed Git for Windows from https://git-scm.com/download/win, then reopened Cursor.
+│   ├── kevin-indig.md
 
----
+│   ├── ryan-law.md
 
-## Notes
+│   ├── cyrus-shepard.md
 
-- This repository was created as part of a technical onboarding/assessment task.
-- All tools were installed and configured successfully on June 2026.
+│   ├── brian-dean.md
+
+│   ├── rand-fishkin.md
+
+│   └── jori-ford.md
+
+└── youtube-transcripts/          # Transcripts via Supadata API
+
+├── nathan-gotch-video1.md
+
+├── nathan-gotch-video2.md
+
+├── aleyda-solis-video1.md
+
+├── aleyda-solis-video2.md
+
+├── rand-fishkin-video1.md
+
+├── rand-fishkin-video2.md
+
+├── mike-king-video1.md
+
+├── mike-king-video2.md
+
+├── cyrus-shepard-video1.md
+
+├── cyrus-shepard-video2.md
+
+├── lily-ray-video1.md
+
+├── lily-ray-video2.md
+
+├── kevin-indig-video1.md
+
+├── kevin-indig-video2.md
+
+├── ryan-law-video1.md
+
+├── ryan-law-video2.md
+
+├── jori-ford-video1.md
+
+└── jori-ford-video2.md
+Data Collection Method
+
+LinkedIn posts: Collected manually from each expert's profile (2–3 posts per expert)
+YouTube transcripts: Collected via Supadata API using PowerShell in Cursor terminal
+
+
+Setup Issues Encountered & Solutions
+Issue 1: npm not recognized after installing Node.js
+Solution: Closed and reopened Cursor IDE to reload PATH.
+Issue 2: PowerShell execution policy blocked npm scripts
+Solution: Ran Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+Issue 3: SSL certificate error during Claude Code install
+Solution: Used --strict-ssl=false flag during npm install.
+Issue 4: Claude Code requires Pro/Max subscription
+Solution: Used Anthropic Console API key instead.
+Issue 5: git not recognized
+Solution: Installed Git for Windows from https://git-scm.com/download/win
+Issue 6: PowerShell curl incompatible with standard flags
+Solution: Used Invoke-RestMethod with -Headers @{"x-api-key"="..."} format instead.
